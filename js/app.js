@@ -34,8 +34,8 @@ function agregarCurso(e) {
 }
 
 //Elimina un curso del carrito
-function eliminarCurso(e){
-    if(e.target.classList.contains('borrar-curso')){//aqui apuntamos a la X del carrito
+function eliminarCurso(e) {
+    if (e.target.classList.contains('borrar-curso')) {//aqui apuntamos a la X del carrito
         const cursoId = e.target.getAttribute('data-id');
 
         //Elimina del arreglo de articulosCarrito por el data-id
@@ -57,11 +57,11 @@ function leerDatosCurso(curso) {
         cantidad: 1
     }
     //Revisa si un elemento ya existe en el carrito
-    const existe = articulosCarrito.some( curso => curso.id === infoCurso.id);
-    if (existe){
+    const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
+    if (existe) {
         //Actualizamos la cantidad
         const cursos = articulosCarrito.map(curso => {
-            if(curso.id === infoCurso.id){
+            if (curso.id === infoCurso.id) {
                 curso.cantidad++;
                 return curso; // retorna el objeto actualizado 
             } else {
