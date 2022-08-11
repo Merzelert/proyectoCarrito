@@ -88,7 +88,7 @@ function carritoHTML() {
         const row = document.createElement('tr');//creamos una fila en el contenedorCarrito (row)
         row.innerHTML = `
         <td>
-            <img src="${curso.imagen}" width="100">
+            <img src="${curso.imagen}" width="50">
         </td>
         <td>
             ${curso.titulo} 
